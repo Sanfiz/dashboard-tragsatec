@@ -168,7 +168,7 @@ layout = dbc.Container([
     # NAVIGATION ARROWS
     # -------------------------
     nav_arrows(
-        prev_href=f"{/weighting/results",
+        prev_href=f"/weighting/results",
         prev_text="Back"
     )
 
