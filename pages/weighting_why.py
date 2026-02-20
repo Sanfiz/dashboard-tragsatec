@@ -22,9 +22,8 @@ CARD_STYLE = {
 }
 
 
-# Proxy for JupyterHub
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-IMG_BASE = f"{PROXY_PREFIX}assets/imgs_weighting"
+
+IMG_BASE = f"/assets/imgs_weighting"
 
 
 # ==========================
@@ -111,8 +110,8 @@ layout = dbc.Container(
 
         # Navigation arrows
         nav_arrows(
-            prev_href=f"{PROXY_PREFIX}weighting",
-            next_href=f"{PROXY_PREFIX}weighting/methodology",
+            prev_href=f"/weighting",
+            next_href=f"/weighting/methodology",
             prev_text="Back to Main Weighting Menu",
             next_text="Go to Methodology"
         ),

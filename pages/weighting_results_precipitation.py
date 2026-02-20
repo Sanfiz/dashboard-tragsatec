@@ -7,12 +7,10 @@ from components.nav_arrows import nav_arrows
 register_page(
     __name__,
     path="/weighting/results/precipitation",
-    name="Weighting EOF Results - Precipitation"
-)
+    name="Weighting EOF Results - Precipitation")
 
-# Prefijo proxy ECMWF
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-BASE = f"{PROXY_PREFIX}assets/imgs_weighting/precipitation"
+
+BASE = f"/assets/imgs_weighting/precipitation"
 
 # Dropdown options
 MODEL_OPTIONS = [
@@ -132,7 +130,7 @@ layout = dbc.Container([
 
     # -------- NAV ARROWS --------
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}weighting/results",
+        prev_href=f"/weighting/results",
         prev_text="Back"
     ),
 

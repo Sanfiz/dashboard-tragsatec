@@ -8,8 +8,8 @@ register_page(
     name="Downscaling Results — Evaluation"
 )
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-BASE = f"{PROXY_PREFIX}assets/imgs_downscaling/evaluation"
+
+BASE = f"/assets/imgs_downscaling/evaluation"
 
 SEASON_OPTIONS = [
     {"label": "Winter", "value": "DJF"},
@@ -46,8 +46,8 @@ layout = dbc.Container([
     ),
 
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}downscaling/results",
-        next_href=f"{PROXY_PREFIX}weighting",
+        prev_href=f"/downscaling/results",
+        next_href=f"/weighting",
         prev_text="Back",
         next_text="Go to Weighting"
     )

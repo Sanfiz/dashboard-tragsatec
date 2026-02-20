@@ -3,9 +3,8 @@ from dash import html, dcc, register_page
 import dash_bootstrap_components as dbc
 from components.nav_arrows import nav_arrows
 
-# Necesario para cargar imágenes en JupyterHub
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-IMG_BASE = f"{PROXY_PREFIX}assets/imgs_weighting"
+
+IMG_BASE = f"/assets/imgs_weighting"
 
 # Registrar la página
 register_page(
@@ -54,7 +53,7 @@ layout = dbc.Container(
                             ),
         
                         ]),
-                        href=f"{PROXY_PREFIX}weighting/results/precipitation",
+                        href=f"/weighting/results/precipitation",
                         className="text-decoration-none"
                     ),
                     md=4,
@@ -71,7 +70,7 @@ layout = dbc.Container(
                             ),
               
                         ]),
-                        href=f"{PROXY_PREFIX}weighting/results/temperature",
+                        href=f"/weighting/results/temperature",
                         className="text-decoration-none"
                     ),
                     md=4,
@@ -88,7 +87,7 @@ layout = dbc.Container(
                             ),
               
                         ]),
-                        href=f"{PROXY_PREFIX}weighting/results/pls",
+                        href=f"/weighting/results/pls",
                         className="text-decoration-none"
                     ),
                     md=4,
@@ -109,7 +108,7 @@ layout = dbc.Container(
         # ----------------------
         # NAVIGATION ARROWS
         # ----------------------
-        nav_arrows(prev_href=f"{PROXY_PREFIX}weighting",prev_text="Back to Main Weighting Menu",)
+        nav_arrows(prev_href=f"/weighting",prev_text="Back to Main Weighting Menu",)
 
         
     ],

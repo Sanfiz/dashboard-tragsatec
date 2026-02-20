@@ -5,8 +5,8 @@ from components.nav_arrows import nav_arrows
 
 register_page(__name__, path="/weighting", name="● Weighting ●")
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-IMG_BASE = f"{PROXY_PREFIX}assets/imgs_weighting"
+
+IMG_BASE = f"/assets/imgs_weighting"
 
 layout = dbc.Container(
     [
@@ -31,7 +31,7 @@ layout = dbc.Container(
                                 "margin": "0 auto"
                             }
                         ),
-                        href=f"{PROXY_PREFIX}weighting/why",
+                        href=f"/weighting/why",
                     ),
                     md=3,
                     className="d-flex justify-content-center p-0"
@@ -51,7 +51,7 @@ layout = dbc.Container(
                                 "margin": "0 auto"
                             }
                         ),
-                        href=f"{PROXY_PREFIX}weighting/methodology",
+                        href=f"/weighting/methodology",
                     ),
                     md=3,
                     className="d-flex justify-content-center p-0"
@@ -71,7 +71,7 @@ layout = dbc.Container(
                                 "margin": "0 auto"
                             }
                         ),
-                        href=f"{PROXY_PREFIX}weighting/results",
+                        href=f"/weighting/results",
                     ),
                     md=3,
                     className="d-flex justify-content-center p-0"
@@ -91,7 +91,7 @@ layout = dbc.Container(
                                 "margin": "0 auto"
                             }
                         ),
-                        href=f"{PROXY_PREFIX}weighting/conclusions",
+                        href=f"/weighting/conclusions",
                     ),
                     md=3,
                     className="d-flex justify-content-center p-0"
@@ -105,8 +105,8 @@ layout = dbc.Container(
         # NAVIGATION ARROWS
         # ================
         nav_arrows(
-            prev_href=f"{PROXY_PREFIX}",
-            next_href=f"{PROXY_PREFIX}weighting",
+            prev_href=f"/",
+            next_href=f"/weighting",
             prev_text="Back to Downscaling",
             next_text="Go to Funding"
         )

@@ -1,7 +1,7 @@
 from dash import html, register_page
 from components.nav_arrows import nav_arrows
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
+
 
 register_page(__name__, path="/downscaling/methodology", name="Downscaling Methodology")
 
@@ -73,7 +73,7 @@ layout = html.Div([
 
         html.Div(
             html.Img(
-                src=f"{PROXY_PREFIX}assets/imgs_downscaling/method_down_1.png",
+                src=f"/assets/imgs_downscaling/method_down_1.png",
                 style={
                     "width": "70%",          
                     "display": "block",
@@ -118,7 +118,7 @@ layout = html.Div([
 
         html.Div(
             html.Img(
-                src=f"{PROXY_PREFIX}assets/imgs_downscaling/method_down_2.png",
+                src=f"/assets/imgs_downscaling/method_down_2.png",
                 style={
                     "width": "70%",          
                     "display": "block",
@@ -134,8 +134,8 @@ layout = html.Div([
 
     # -----------------------------------------------------------------------------
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}downscaling",
-        next_href=f"{PROXY_PREFIX}downscaling/results",
+        prev_href=f"/downscaling",
+        next_href=f"/downscaling/results",
         prev_text="Back to Downscaling Main",
         next_text="Go to Downscaling Results"
     )

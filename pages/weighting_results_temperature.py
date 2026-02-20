@@ -10,9 +10,8 @@ register_page(
     name="Weighting Results - Temperature"
 )
 
-# Prefijo proxy ECMWF
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-BASE = f"{PROXY_PREFIX}assets/imgs_weighting/temperature"
+
+BASE = f"/assets/imgs_weighting/temperature"
 
 
 # ------------------------------
@@ -132,7 +131,7 @@ layout = dbc.Container([
 
     # -------- NAV ARROWS --------
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}weighting/results",
+        prev_href=f"/weighting/results",
         prev_text="Back"
     ),
     

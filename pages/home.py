@@ -6,8 +6,6 @@ register_page(__name__, path="/")
 # Definir la ruta del proxy (DEBE coincidir con la de app.py)
 # Definir la ruta del proxy aquí para que los botones de navegación grandes funcionen.
 # Si el usuario o puerto cambian, debe actualizarse en app.py Y en home.py.
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-
 
 AEMET_BLUE = "#b8dbcb"
 
@@ -38,7 +36,7 @@ layout = dbc.Container([
                         html.H4("Downscaling", className="fw-bold mb-3"),
 
                         html.Img(
-                            src=f"{PROXY_PREFIX}assets/downscaling_iberia.png", 
+                            src=f"/assets/downscaling_iberia.png", 
                             alt="Imagen del método de Downscaling",
                             style={"maxWidth": "80%", "height": "auto", "marginBottom": "20px", "borderRadius": "5px", "boxShadow": "0 2px 8px rgba(0,0,0,0.1)"}),
      
@@ -48,7 +46,7 @@ layout = dbc.Container([
                     style=CARD_STYLE,
                     className="d-flex flex-column align-items-center justify-content-center h-100"
                 ),
-                href=f"{PROXY_PREFIX}downscaling",
+                href=f"/downscaling",
                 className="text-decoration-none" # Quita el subrayado del enlace
             ),
             md=6, 
@@ -66,7 +64,7 @@ layout = dbc.Container([
                         html.H4("Ensemble Weighting", className="fw-bold mb-3"),
 
                         html.Img(
-                            src=f"{PROXY_PREFIX}assets/method2-image.png", 
+                            src=f"/assets/method2-image.png", 
                             alt="Imagen del método de Weighting",
                             style={"maxWidth": "80%", "height": "auto", "marginBottom": "20px", "borderRadius": "5px", "boxShadow": "0 2px 8px rgba(0,0,0,0.1)"}
                         ),
@@ -79,7 +77,7 @@ layout = dbc.Container([
                     style=CARD_STYLE,
                     className="d-flex flex-column align-items-center justify-content-center h-100"
                 ),
-                href=f"{PROXY_PREFIX}weighting",
+                href=f"/weighting",
                 className="text-decoration-none" # Quita el subrayado del enlace
             ),
             md=6,

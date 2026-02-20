@@ -5,8 +5,7 @@ from components.nav_arrows import nav_arrows
 
 register_page(__name__, path="/downscaling", name="● Downscaling ●")
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-IMG_BASE = f"{PROXY_PREFIX}assets/imgs_downscaling"
+IMG_BASE = f"/assets/imgs_downscaling"
 
 layout = dbc.Container([
 
@@ -28,7 +27,7 @@ layout = dbc.Container([
                         "margin": "0 auto"
                     }
                 ),
-                href=f"{PROXY_PREFIX}downscaling/methodology",
+                href=f"/downscaling/methodology",
                 className="text-decoration-none"
             ),
             md=4,
@@ -51,7 +50,7 @@ layout = dbc.Container([
                         "margin": "0 auto"
                     }
                 ),
-                href=f"{PROXY_PREFIX}downscaling/results",
+                href=f"/downscaling/results",
                 className="text-decoration-none"
             ),
             md=4,
@@ -65,8 +64,8 @@ layout = dbc.Container([
     # NAVIGATION ARROWS
     # ----------------------
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}",          # <- Home
-        next_href=f"{PROXY_PREFIX}weighting", # ->  Weighting
+        prev_href=f"/",          # <- Home
+        next_href=f"/weighting", # ->  Weighting
         prev_text="Back to Home",
         next_text="Go to Weighting"
     )

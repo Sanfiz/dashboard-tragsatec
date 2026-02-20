@@ -11,10 +11,10 @@ register_page(
     name="Downscaling Results — Precipitation"
 )
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
+
 
 # Carpetas de las figuras
-BASE_MAIN = f"{PROXY_PREFIX}assets/imgs_downscaling/precipitation"
+BASE_MAIN = f"/assets/imgs_downscaling/precipitation"
 
 # ---- MODELOS ----
 MODEL_OPTIONS = [
@@ -108,8 +108,8 @@ layout = html.Div([
 
         # ---------- NAV ARROWS ----------
         nav_arrows(
-            prev_href=f"{PROXY_PREFIX}downscaling/results",
-            next_href=f"{PROXY_PREFIX}downscaling/results/terciles",
+            prev_href=f"/downscaling/results",
+            next_href=f"/downscaling/results/terciles",
             prev_text="Back",
             next_text="Next: Terciles"
         ),

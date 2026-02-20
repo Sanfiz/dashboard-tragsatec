@@ -4,7 +4,7 @@ import dash_bootstrap_components as dbc
 from components.nav_arrows import nav_arrows
 import plotly.graph_objects as go 
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/" 
+
 
 register_page(
     __name__,
@@ -226,7 +226,7 @@ layout = dbc.Container([
                     html.Div(
                         [
                             html.Img(
-                                src=f"{PROXY_PREFIX}assets/imgs_weighting/ERA5_EOFs_DJF.png",
+                                src=f"/assets/imgs_weighting/ERA5_EOFs_DJF.png",
                                 style={
                                     "maxWidth": "70%",
                                     "display": "block",
@@ -354,8 +354,8 @@ layout = dbc.Container([
         # NAVIGATION ARROWS
         # ----------------------
         nav_arrows(
-            prev_href=f"{PROXY_PREFIX}weighting",
-            next_href=f"{PROXY_PREFIX}weighting/results",
+            prev_href=f"/weighting",
+            next_href=f"/weighting/results",
             prev_text="Back to Main Weighting Menu ",
             next_text="Go to Results"
         )

@@ -11,7 +11,7 @@ register_page(
     title="● Weighting Conclusions ●"
 )
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
+
 AEMET_BLUE = "#003060"
 
 # ===========================
@@ -113,8 +113,8 @@ layout = dbc.Container(
         # NAVIGATION
         # ========================
         nav_arrows(
-            prev_href=f"{PROXY_PREFIX}weighting/results",
-            next_href=f"{PROXY_PREFIX}weighting",
+            prev_href=f"/weighting/results",
+            next_href=f"/weighting",
             prev_text="Back to Results",
             next_text="Return to Weighting Menu"
         ),

@@ -3,9 +3,8 @@ from dash import html, dcc, register_page, callback, Input, Output
 import dash_bootstrap_components as dbc
 from components.nav_arrows import nav_arrows
 
-# Proxy for JupyterHub
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-IMG_BASE = f"{PROXY_PREFIX}assets/imgs_weighting/pls"
+
+IMG_BASE = f"/assets/imgs_weighting/pls"
 
 # Register page
 register_page(
@@ -169,7 +168,7 @@ layout = dbc.Container([
     # NAVIGATION ARROWS
     # -------------------------
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}weighting/results",
+        prev_href=f"{/weighting/results",
         prev_text="Back"
     )
 

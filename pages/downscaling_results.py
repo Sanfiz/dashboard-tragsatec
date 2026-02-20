@@ -4,8 +4,8 @@ from components.nav_arrows import nav_arrows
 
 register_page(__name__, path="/downscaling/results", name="Downscaling Results")
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-IMG_BASE = f"{PROXY_PREFIX}assets/imgs_downscaling"
+
+IMG_BASE = f"/assets/imgs_downscaling"
 
 # --- ESTILO MINI-CARDS ---
 MINI_CARD = {
@@ -76,23 +76,23 @@ layout = dbc.Container([
             # EVALUATION
             small_card(
                 f"{IMG_BASE}/evaluation/evaluation.png",   
-                f"{PROXY_PREFIX}downscaling/results/evaluation"
+                f"/downscaling/results/evaluation"
             ),
 
             # PRECIPITATION
             small_card(
                 f"{IMG_BASE}/precipitation/precipitation.png",
-                f"{PROXY_PREFIX}downscaling/results/precipitation"
+                f"/downscaling/results/precipitation"
             ),
 
             small_card(
                 f"{IMG_BASE}/terciles/tercile.png",
-                f"{PROXY_PREFIX}downscaling/results/terciles"
+                f"/downscaling/results/terciles"
             ),
 
             small_card(
                 f"{IMG_BASE}/scores/scores.png",
-                f"{PROXY_PREFIX}downscaling/results/scores"
+                f"/downscaling/results/scores"
             ),
 
 
@@ -102,8 +102,8 @@ layout = dbc.Container([
 
     # NAVIGATION ARROWS
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}downscaling/methodology",
-        next_href=f"{PROXY_PREFIX}weighting",
+        prev_href=f"/downscaling/methodology",
+        next_href=f"/weighting",
         prev_text="Back to Downscaling Methodology",
         next_text="Go to Weighting Menu"
     )

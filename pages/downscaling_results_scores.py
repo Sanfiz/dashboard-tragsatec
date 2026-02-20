@@ -6,11 +6,10 @@ from components.nav_arrows import nav_arrows
 register_page(
     __name__,
     path="/downscaling/results/scores",
-    name="Downscaling Results - Scores"
-)
+    name="Downscaling Results - Scores")
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-BASE = f"{PROXY_PREFIX}assets/imgs_downscaling/scores"
+
+BASE = f"/assets/imgs_downscaling/scores"
 
 # ======================
 # Dropdown options
@@ -132,7 +131,7 @@ layout = dbc.Container([
 
     # -------- NAV ARROWS --------
     nav_arrows(
-        prev_href=f"{PROXY_PREFIX}downscaling/results/terciles",
+        prev_href=f"/downscaling/results/terciles",
         prev_text="Back"
     ),
 

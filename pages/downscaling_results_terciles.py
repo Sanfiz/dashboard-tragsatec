@@ -10,8 +10,8 @@ register_page(
     name="Downscaling Results — Terciles"
 )
 
-PROXY_PREFIX = "/user/esp9221/proxy/8055/"
-BASE = f"{PROXY_PREFIX}assets/imgs_downscaling/terciles/ecmwf"
+
+BASE = f"/assets/imgs_downscaling/terciles/ecmwf"
 
 # ---- REGIONES ----
 REGIONS = [
@@ -168,8 +168,8 @@ layout = html.Div([
 
         # -------- NAV ARROWS --------
         nav_arrows(
-            prev_href=f"{PROXY_PREFIX}downscaling/results/precipitation",
-            next_href=f"{PROXY_PREFIX}downscaling/results/scores",
+            prev_href=f"/downscaling/results/precipitation",
+            next_href=f"/downscaling/results/scores",
             prev_text="Back",
             next_text="Next: Scores"
         ),
