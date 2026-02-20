@@ -1,0 +1,174 @@
+/* =========================================================
+   1. TIPOGRAFÍA AEMET (Montserrat)
+   ========================================================= */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body, html, * {
+    font-family: 'Montserrat', sans-serif !important;
+    color: #022d52;
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   2. COLOR PRINCIPAL (AEMET Azul #003B70)
+   ========================================================= */
+:root {
+    --aemet-blue: #022d52;
+    --aemet-blue-light: #022d52;
+    --aemet-blue-bg: #022d52;
+}
+
+/* =========================================================
+   3. BACKGROUND GLOBAL
+   ========================================================= */
+body {
+    background-image: url("imagen-logo1.svg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+/* =========================================================
+   4. TÍTULOS
+   ========================================================= */
+h1, h2, h3 {
+    color: var(--aemet-blue);
+    font-weight: 600;
+}
+
+/* =========================================================
+   5. ENLACES
+   ========================================================= */
+a {
+    color: var(--aemet-blue);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* =========================================================
+   6. BOTONES AEMET
+   ========================================================= */
+.btn, .dash-button {
+    background-color: var(--aemet-blue) !important;
+    border-color: var(--aemet-blue) !important;
+    color: white !important;
+    font-weight: 500;
+    border-radius: 6px;
+    padding: 10px 18px;
+    transition: 0.25s ease;
+}
+
+.btn:hover, .dash-button:hover {
+    background-color: var(--aemet-blue-light) !important;
+    border-color: var(--aemet-blue-light) !important;
+}
+
+/* =========================================================
+   7. TARJETAS
+   ========================================================= */
+.card, .dbc-card {
+    border-radius: 12px;
+    border: 1px solid #d6dbe5;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    background-color: rgba(255,255,255,0.92);  /* ← semitransparente sobre fondo */
+    padding: 20px;
+    transition: 0.3s ease;
+}
+
+.card:hover, .dbc-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
+
+/* =========================================================
+   8. CONTENEDORES
+   ========================================================= */
+.container, .dbc-container {
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+/* =========================================================
+   9. INPUTS, DROPDOWNS, SELECTS
+   ========================================================= */
+input, select, textarea, .Select-control, .VirtualizedSelectOption {
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+input:focus, select:focus, textarea:focus {
+    border-color: var(--aemet-blue) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0,59,112,0.25) !important;
+}
+
+.Select--multi .Select-value {
+    background-color: var(--aemet-blue-bg) !important;
+    border: none !important;
+    color: var(--aemet-blue) !important;
+}
+
+/* =========================================================
+   10. FOOTER
+   ========================================================= */
+.footer {
+    background-color: var(--aemet-blue);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: 400;
+}
+
+/* ================================
+   FORZAR NAVBAR SUPER DELGADA
+================================ */
+
+/* Quita padding interno del contenedor del navbar */
+.navbar-aemet .container,
+.navbar-aemet .container-fluid {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 32px !important;
+}
+
+/* Navbar en sí */
+.navbar-aemet {
+    min-height: 32px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Los elementos <nav> */
+.navbar-aemet .navbar-nav .nav-link {
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    line-height: 24px !important;
+}
+
+/* Marca (brand) si alguna vez la usas */
+.navbar-aemet .navbar-brand {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+}
+
+
+/* === Forzar tamaño de los logos del header === */
+
+.logo-aemet {
+    height: 42px !important;   /* Ajusta al tamaño que quieras */
+    width: auto !important;
+}
+
+.logo-tragsatec {
+    height: 44px !important;   /* Ajusta al tamaño que quieras */
+    width: auto !important;
+}
+
+/* Evitar que Bootstrap sobrescriba */
+.header-logos img {
+    max-width: none !important;
+    height: auto;
+}
+

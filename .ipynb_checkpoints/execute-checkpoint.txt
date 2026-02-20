@@ -1,0 +1,20 @@
+python3 app.py
+
+https://jupyterhub.ecmwf.int/user/esp9221/proxy/8055/
+
+
+
+#-------------------
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/Sanfiz/seasonal-aemettragsatec.git
+git remote -v
+
+#------------
+cada vez que hagas cambios:
+git add .
+git commit -m "describe lo que cambias"
+git push
+
+

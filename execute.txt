@@ -1,0 +1,31 @@
+python3 app.py
+
+https://jupyterhub.ecmwf.int/user/esp9221/proxy/8055/
+
+
+
+#-------------------
+git init
+git add .
+git commit -m "Initial commit"
+git remote add origin https://github.com/Sanfiz/dashboard-tragsatec.git
+git remote -v
+
+#------------
+cada vez que hagas cambios:
+git add .
+git commit -m "describe lo que cambias"
+git push
+
+
+#-------------------
+
+cd /etc/ecmwf/nfs/dh2_perm_b/esp9221/dashboard-tragsatec
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/TU_USUARIO/dashboard-tragsatec.git
+git push -u origin main
+
+
