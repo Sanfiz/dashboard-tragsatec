@@ -16,6 +16,13 @@ AEMET_BLUE = "#b8dbcb"
 app = dash.Dash(__name__,use_pages=True,requests_pathname_prefix=JUPYTERHUB_ROUTE,external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server 
 
+import flask
+
+@server.route('/assets/<path:path>')
+def serve_static_assets(path):
+    return flask.send_from_directory('assets', path)
+
+
 
 BACKGROUND_STYLE = {
     'backgroundImage': f'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("{JUPYTERHUB_ROUTE}assets/fondo-gris.png")',
