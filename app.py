@@ -1,6 +1,7 @@
 import dash
 from dash import html, dcc
 import dash_bootstrap_components as dbc
+import flask
 
 # ---------------------------------------------------------------------------------------------------
 
@@ -16,16 +17,18 @@ AEMET_BLUE = "#b8dbcb"
 app = dash.Dash(__name__,use_pages=True,requests_pathname_prefix=JUPYTERHUB_ROUTE,external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server 
 
-import flask
-
 @server.route('/assets/<path:path>')
 def serve_static_assets(path):
+    return flask.send_from_directory('assets', path)
+
+@server.route('/user/esp9221/proxy/8055/assets/<path:path>')
+def redirect_old_assets(path):
     return flask.send_from_directory('assets', path)
 
 
 
 BACKGROUND_STYLE = {
-    'backgroundImage': f'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("{JUPYTERHUB_ROUTE}assets/fondo-gris.png")',
+    'backgroundImage': f'linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("/assets/fondo-gris.png")',
     'backgroundSize': 'cover',
     'backgroundAttachment': 'fixed',
     'backgroundRepeat': 'no-repeat',
@@ -57,17 +60,17 @@ def navbar_menu():
             dbc.NavbarBrand(""),
             dbc.Nav(
                 [
-                    dbc.NavLink("Home   ", href=JUPYTERHUB_ROUTE, active="exact", className="nav-link-aemet"),
+                    dbc.NavLink("Home   ", href=f"/", active="exact", className="nav-link-aemet"),
                     dbc.NavLink("|", active="exact", className="nav-link-aemet"),
-                    dbc.NavLink("Data   ", href=f"{JUPYTERHUB_ROUTE}data", active="exact", className="nav-link-aemet"),
+                    dbc.NavLink("Data   ", href=f"/data", active="exact", className="nav-link-aemet"),
                     dbc.NavLink("|", active="exact", className="nav-link-aemet"),
-                    dbc.NavLink("Downscaling   ", href=f"{JUPYTERHUB_ROUTE}downscaling", active="exact", className="nav-link-aemet"),
+                    dbc.NavLink("Downscaling   ", href=f"/downscaling", active="exact", className="nav-link-aemet"),
                     dbc.NavLink("|", active="exact", className="nav-link-aemet"),
-                    dbc.NavLink("Weighting   ", href=f"{JUPYTERHUB_ROUTE}weighting", active="exact", className="nav-link-aemet"),
+                    dbc.NavLink("Weighting   ", href=f"/weighting", active="exact", className="nav-link-aemet"),
                     dbc.NavLink("|", active="exact", className="nav-link-aemet"),
-                    dbc.NavLink("Funding   ", href=f"{JUPYTERHUB_ROUTE}funding", active="exact", className="nav-link-aemet"),
+                    dbc.NavLink("Funding   ", href=f"/funding", active="exact", className="nav-link-aemet"),
                     dbc.NavLink("|", active="exact", className="nav-link-aemet"),
-                    dbc.NavLink("What's Next  ", href=f"{JUPYTERHUB_ROUTE}whatsnext", active="exact", className="nav-link-aemet"),
+                    dbc.NavLink("What's Next  ", href=f"/whatsnext", active="exact", className="nav-link-aemet"),
 
                 ],
                 className="p-0 ms-auto",
