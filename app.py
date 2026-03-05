@@ -106,7 +106,7 @@ app.layout = html.Div([
     dbc.Container(
         html.Div(
             [
-                html.P("Marta Domínguez & Sabela Sanfiz (Tragsatec) ● Esteban Rodríguez (AEMET)",
+                html.P("Marta Domínguez, Martín Senande, Sabela Sanfiz (Tragsatec) ● Esteban Rodríguez (AEMET)",
                     className="mb-0",
                     style={"color": "grey"}
                 ),
